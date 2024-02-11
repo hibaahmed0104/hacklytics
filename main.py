@@ -8,7 +8,7 @@ with open('url.csv', 'r') as csv_file:
     next(csv_reader)
 
     # write fieldnames header to sentimentscores.csv
-    with open('sentimentscores.csv', 'a', newline='') as new_file:
+    with open('website/sentimentscores.csv', 'a', newline='') as new_file:
             fieldnames = ['company', 'score1', 'score2', 'score3', 'score4', 'score5']
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter=' ')
             csv_writer.writeheader()
@@ -39,7 +39,7 @@ with open('url.csv', 'r') as csv_file:
             sentiment_list[i - 1] = sentiment
 
         # write sentiment scores to sentimentscores.csv
-        with open('sentimentscores.csv', 'a', newline='') as new_file:
+        with open('website/sentimentscores.csv', 'a', newline='') as new_file:
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter=' ')
             csv_writer.writerow({'company': company_name, 'score1': sentiment_list[0], 'score2': sentiment_list[1], 'score3': sentiment_list[2], 'score4': sentiment_list[3], 'score5': sentiment_list[4]})
             new_file.close()
