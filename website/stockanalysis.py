@@ -2,7 +2,7 @@ import csv
 
 csv_filename = '/Users/meghanamukkoti/Desktop/hacklytics/Stoquette/website/stock_data.csv'
 output_csv_filename = '/Users/meghanamukkoti/Desktop/hacklytics/Stoquette/website/output_stock_data.csv'
-listName = ["AMZN", "ELV", "BAC", "C", "CMS", "CVS", "DUK", "FIS", "GM", "PGR", "HSY", "VRTX"]
+listName = ["AMZN", "ANTM", "BAC", "C", "CMS", "CVS", "DUK", "FIS", "GM", "PGR", "HSY", "VRTX"]
 
 try:
     with open(csv_filename, mode='r') as csvfile, open(output_csv_filename, mode='w', newline='') as output_csv:
